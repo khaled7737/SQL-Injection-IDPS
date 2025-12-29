@@ -1,0 +1,12 @@
+# تم استنتاج التبعيات بناءً على تحليل الكود المصدري
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Flask-WTF
+SQLAlchemy
+werkzeug
+scikit-learn
+joblib
+requests
+libinjection # قد يتطلب تثبيته يدوياً أو عبر حزمة أخرى
+# smtplib و urllib و base64 هي مكتبات قياسية في Python

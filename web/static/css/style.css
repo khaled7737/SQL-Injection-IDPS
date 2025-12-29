@@ -1,0 +1,126 @@
+/* Custom styles for SQL Injection Detector */
+
+:root {
+  --shield-inactive: #6c757d;
+  --shield-active: #28a745;
+  --shield-glow: rgba(40, 167, 69, 0.5);
+}
+
+/* General layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Shield Styles */
+.shield-wrapper {
+  width: 200px;
+  height: 240px;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.shield-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.shield-base {
+  fill: var(--shield-inactive);
+  transition: fill 0.5s ease;
+}
+
+.shield-inner {
+  fill: #343a40;
+  transition: fill 0.5s ease;
+}
+
+.lock-icon {
+  fill: #fff;
+}
+
+.shield-wrapper.active .shield-base {
+  fill: var(--shield-active);
+  filter: drop-shadow(0 0 10px var(--shield-glow));
+}
+
+.shield-wrapper.active .shield-inner {
+  fill: #28a745;
+}
+
+.check-icon {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: draw 1s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Custom card styling */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+
+
+/* Sidebar styles */
+.sidebar {
+  transition: width 0.3s ease;
+  background-color: darkslategrey;
+}
+
+.sidebar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Table styles */
+.table th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.table th:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animation for toasts */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Configuration dialog backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .shield-wrapper {
+    width: 150px;
+    height: 180px;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Detector</title>
+    
+    <!-- Bootstrap CSS with Replit theme -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-agent-dark-theme.min.css') }}">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    
+    <!-- React and React-DOM -->
+    <script src="{{ url_for('static', filename='js/react/react.development.js') }}"  crossorigin></script>
+    <script src="{{ url_for('static', filename='js/react/react-dom.development.js') }}"crossorigin></script>
+    
+    <!-- Babel for JSX -->
+    <script src="{{ url_for('static', filename='js/react/babel.min.js') }}"></script>
+    
+    <!-- Axios for API requests -->
+    <script src="{{ url_for('static', filename='js/react/axios.min.js') }}" ></script>
+    
+    <!-- Chart.js for data visualization -->
+    <script src="{{ url_for('static', filename='js/react/chart.js') }}" ></script>
+    
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="{{ url_for('static', filename='js/react/bootstrap.bundle.min.js') }}"></script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

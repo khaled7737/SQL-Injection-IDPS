@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- This is where our React application will be mounted -->
+<div id="root"></div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Import our React components -->
+<script type="text/babel" src="{{ url_for('static', filename='js/utils.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/components/Shield.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/components/ConfigDialog.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/components/Dashboard.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/components/Reports.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/components/Settings.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/components/Sidebar.js') }}"></script>
+<script type="text/babel" src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

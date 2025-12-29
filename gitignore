@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Nginx Temporary Files
+nginx/logs/*
+nginx/temp/*
+nginx/client_body_temp/*
+nginx/proxy_temp/*
+nginx/fastcgi_temp/*
+nginx/uwsgi_temp/*
+nginx/scgi_temp/*
+!nginx/logs/.gitkeep
+
+# Models
+# model/*.joblib  # قد ترغب في رفع النماذج إذا كانت صغيرة، أو استثنائها إذا كانت كبيرة
+
+# OS
+.DS_Store
+Thumbs.db
